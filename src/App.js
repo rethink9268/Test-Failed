@@ -35,31 +35,31 @@ function App() {
     })
 
     const areaFiltered = data.filter(item => {
-      if (areaCode == 'all') {
+      if (areaCode === 'all') {
         return item
       }
-      if (areaCode == 1) {
+      if (areaCode === '1') {
         return item.area <= 30
       }
-      if (areaCode == 2) {
+      if (areaCode === '2') {
         return item.area <= 40 && item.area > 30
       }
-      if (areaCode == 3) {
+      if (areaCode === '3') {
         return item.area >= 40
       }
     })
 
     const moneyFiltered = data.filter(item => {
-      if (moneyCode == 'all') {
+      if (moneyCode === 'all') {
         return item
       }
-      if (moneyCode == 1) {
-        return item.price <= 3000000
+      if (moneyCode === '1') {
+        return item.price < 3000000
       }
-      if (moneyCode == 2) {
-        return item.price <= 5000000 && item.price > 3000000
+      if (moneyCode === '2') {
+        return item.price < 5000000 && item.price >= 3000000
       }
-      if (moneyCode == 3) {
+      if (moneyCode === '3') {
         return item.price >= 5000000
       }
     })
